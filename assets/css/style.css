@@ -1,35 +1,32 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(41, 39, 39);
+    font-family: "Raleway", sans-serif;
+    color: #e1e7ec;
     text-align: center;
-    align-content: center;
+    background: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)center center / cover no-repeat fixed;
 }
 
-
-
-#questionbox {
-    background-color: #ded6e6;
-    display: inline-block;
-    width: 60%;
-    max-height: 100%;
-    align-content: center;
-    text-align: center;
-    opacity: 100%;
-    margin-left: 10px;
-    padding-left: 5px;
-    margin-bottom: 168px;
-
+.game-area {
+    background-color: #eff2f3;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
 }
 
-#answer {
+.character-button {
+    border: none;
+    height: 25%;
+    width: 25%;
+}
+
+.score-area {
     position: relative;
-    font-size: 50%;
-    padding: 1rem 0.3rem;
-    border-radius: 0.3rem;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    min-width: 0;
-    width: 50%;
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
 }

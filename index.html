@@ -3,37 +3,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Quiz">
-    <meta name="keywords" content="Sport, Cartoons, Cities, Harry Potter, 007">
-	<meta name="author" content="Tenable">
+    <meta name="description" content="Rock, Paper, Scissors">
+    <meta name="keywords" content="Rock, Paper, Scissors">
+	<meta name="author" content="Rock, Paper, Scissors">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css"/>
 
-    <title>Tenable!</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <section id="questionbox">
-    <div class = "question">
-    This is going to display a question.
-    </div>
-    <div class = "textbox">
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
-        <input id = "answer" type = "text"><br>
+    <h1 class = "heading">
+        <img class = "logo" src = "assets/images/fist-192x192.png" alt = "logo"> Rock, Paper, Scissors
+    </h1>
+
+    <div class = "game-area">
+        <button data-type= "rock" id="rock" class="character-button"><img class = "logo" src = "assets/images/fist-192x192.png" alt = "logo">Rock</button>
+        <button data-type= "paper" id="paper" class="character-button"><img class = "logo" src = "assets/images/newspaper-192x192.png" alt = "logo">Paper</button>
+        <button data-type= "scissors" id="scissors" class="character-button"><img class = "logo" src = "assets/images/scissors-192x192.png" alt = "logo">Scissors</button>
     </div>
 
+    <div id="turn-outcome">
+        
+    </div>
 
+    <div class = "score-area">
+        <p class = "scores">Player<br><span id = "player">0</span></p>
+        <p class = "scores">Computer<br><span id = "computer">0</span></p>
 
-</section>
+    </div>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
