@@ -4,10 +4,11 @@ body {
     color: #e1e7ec;
     text-align: center;
     background: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)center center / cover no-repeat fixed;
-}
+    opacity: 100%;
 
 .game-area {
-    background-color: #eff2f3;
+    /*background-color: #eff2f3;*/
+    color: #e1e7ec;
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
@@ -16,17 +17,36 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+    padding-right: 2%;
+}
+
+.logo {
+    width: 40%;
+    height: 60%;
 }
 
 .character-button {
     border: none;
+    color: #e1e7ec;
     height: 25%;
     width: 25%;
+    background: none;
 }
 
 .score-area {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin: 5px auto;
     width: 60%;
-    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#turn-outcome {
+    color: #e1e7ec;
+    align-content: bottom;
+    margin-top: 25px;
+    padding-top: 9%;
 }

@@ -16,22 +16,36 @@
 </head>
 <body>
     <h1 class = "heading">
-        <img class = "logo" src = "assets/images/fist-192x192.png" alt = "logo"> Rock, Paper, Scissors
+        <img class = "headlogo" src = "assets/images/fist-192x192.png" alt = "headlogo"> Rock, Paper, Scissors
     </h1>
 
     <div class = "game-area">
-        <button data-type= "rock" id="rock" class="character-button"><img class = "logo" src = "assets/images/fist-192x192.png" alt = "logo">Rock</button>
-        <button data-type= "paper" id="paper" class="character-button"><img class = "logo" src = "assets/images/newspaper-192x192.png" alt = "logo">Paper</button>
-        <button data-type= "scissors" id="scissors" class="character-button"><img class = "logo" src = "assets/images/scissors-192x192.png" alt = "logo">Scissors</button>
+        <button data-type= "rock" id="rock" class="character-button">
+            <img class = "logo" src = "assets/images/fist-192x192.png" alt = "logo">
+            <p>Rock</p>
+        </button>
+
+        <button data-type= "paper" id="paper" class="character-button">
+            <img class = "logo" src = "assets/images/newspaper-192x192.png" alt = "logo">
+            <p>Paper</p>
+        </button>
+
+        <button data-type= "scissors" id="scissors" class="character-button">
+            <img class = "logo" src = "assets/images/scissors-192x192.png" alt = "logo">
+            <p>Scissors</p>
+        </button>
+
+
+        <div id="turn-outcome">
+        
+        </div>
     </div>
 
-    <div id="turn-outcome">
-        
-    </div>
+    
 
     <div class = "score-area">
-        <p class = "scores">Player<br><span id = "player">0</span></p>
-        <p class = "scores">Computer<br><span id = "computer">0</span></p>
+        <p class = "scores">Player<br><span id = "player-score">0</span></p>
+        <p class = "scores">Computer<br><span id = "computer-score">0</span></p>
 
     </div>
     <script src="assets/js/script.js" defer></script>

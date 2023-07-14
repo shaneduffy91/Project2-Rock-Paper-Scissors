@@ -34,6 +34,7 @@ function playTurn(event){
    figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter)
 }
 
+
 function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
 
     if (playerCharacter === computerCharacter) {
@@ -43,20 +44,25 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
     else if (playerCharacter === 'rock' && computerCharacter === 'scissors') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
+        incrementPlayerScore()
     }
     else if (playerCharacter === 'paper' && computerCharacter === 'rock') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
+        incrementPlayerScore()
     }
     else if (playerCharacter === 'scissors' && computerCharacter === 'paper') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
+        incrementPlayerScore()
     }
     else {
         // computer wins
         turnOutcomeDiv.innerText = 'Computer wins'
+        incrementComputerScore()
     }
 }
+
 
 
 function getComputerCharacter() {
@@ -71,9 +77,16 @@ function getComputerCharacter() {
     return randomCharacter
 }
 
-function incrementScore() {
+
+function incrementPlayerScore() {
     
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+    let playerScore = parseInt(document.getElementById("player-score").innerText);
+    document.getElementById("player-score").innerText = ++playerScore;
+
 }
 
+
+function incrementComputerScore() {
+    let compScore = parseInt(document.getElementById("computer-score").innerText);
+    document.getElementById("computer-score").innerText = ++compScore;f
+}
