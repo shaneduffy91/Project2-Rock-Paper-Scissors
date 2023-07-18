@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(41, 39, 39);
+    /*background-color: rgb(41, 39, 39);*/
     font-family: "Raleway", sans-serif;
     color: #e1e7ec;
     text-align: center;
@@ -8,7 +8,7 @@ body {
 }
 
 .game-area {
-    /*background-color: #eff2f3;*/
+    background-color: #26b3e2;
     color: #e1e7ec;
     box-sizing: border-box;
     width: 85%;
@@ -65,15 +65,35 @@ body {
 
 .btn--blue:active,
 .btn--blue:hover {
-    background-color: darkblue;
+    /*background-color: darkblue;*/
+    transform: scale(1.5); 
     color: white;
 }
 
-.btn--red:active,
+#player-choice {
+    background-color: green;
+    display: inline;
+    width: 240px;
+    height: 240px;
+    margin-top: 10px;
+    
+}
+
+#computer-choice {
+    background-color: blueviolet;
+    display: inline;
+    font-size: 10rem;
+    width: 240px;
+    height: 240px;
+    margin-top: 10px;
+
+}
+
+/*.btn--red:active,
 .btn--red:hover {
     background-color: darkred;
     color: white;
-}
+}*/
 
 @media (max-width: 500px) {
     .heading {

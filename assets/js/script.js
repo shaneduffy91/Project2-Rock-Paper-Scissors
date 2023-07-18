@@ -16,13 +16,51 @@ const rockButton = document.getElementById('rock');
 const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors');
 const turnOutcomeDiv = document.getElementById('turn-outcome');
-const compRockButton = document.getElementById('comp-rock');
-const compPaperButton = document.getElementById('comp-paper');
-const compScissors = document.getElementById('comp-scissors');
+let playerChoice = document.getElementById('player-choice');
+let computerChoice = document.getElementById('computer-choice');
 
 rockButton.addEventListener('click', playTurn)
 paperButton.addEventListener('click', playTurn)
 scissorsButton.addEventListener('click', playTurn)
+
+
+function fistImage() {
+    let img = document.createElement('img');
+    img.src = 'assets/images/fist-192x192.png';
+    computerChoice.appendChild(img);
+}
+
+function paperImage() {
+    let img = document.createElement('img');
+    img.src = 'assets/images/newspaper-192x192.png';
+    computerChoice.appendChild(img);
+}
+
+function scissorsImage() {
+    let img = document.createElement('img');
+    img.src = 'assets/images/scissors-192x192.png';
+    computerChoice.appendChild(img);
+}
+
+
+function playerFistImage() {
+    let img = document.createElement('img');
+    img.src = 'assets/images/fist-192x192.png';
+    playerChoice.appendChild(img);
+}
+
+function playerPaperImage() {
+    let img = document.createElement('img');
+    img.src = 'assets/images/newspaper-192x192.png';
+    playerChoice.appendChild(img);
+}
+
+function playerScissorsImage() {
+    let img = document.createElement('img');
+    img.src = 'assets/images/scissors-192x192.png';
+    playerChoice.appendChild(img);
+}
+
 
 
 function playTurn(event){
@@ -41,17 +79,17 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
         // draw
         turnOutcomeDiv.innerText = 'Draw'
     }
-    else if (playerCharacter === 'rock' && computerCharacter === 'comp-scissors') {
+    else if (playerCharacter === 'rock' && computerCharacter === 'scissors') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
     }
-    else if (playerCharacter === 'paper' && computerCharacter === 'comp-rock') {
+    else if (playerCharacter === 'paper' && computerCharacter === 'rock') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
     }
-    else if (playerCharacter === 'scissors' && computerCharacter === 'comp-paper') {
+    else if (playerCharacter === 'scissors' && computerCharacter === 'paper') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
@@ -66,11 +104,20 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
 
 function getComputerCharacter() {
 
-    let characterOptions = ['comp-rock', 'comp-paper', 'comp-scissors']
+    let characterOptions = ['rock', 'paper', 'scissors']
 
     let randomCharacterIndex = Math.floor(Math.random() * characterOptions.length)
 
     let randomCharacter = characterOptions[randomCharacterIndex]
+    if (randomCharacter === "rock") {
+        fistImage()
+    } else if 
+       (randomCharacter === "paper") {
+        paperImage()
+    } else {
+       scissorsImage()
+    }
+
 
     console.log(randomCharacter)
     
@@ -78,18 +125,19 @@ function getComputerCharacter() {
 }
 
 
-function blueButton() {
-    if (getComputerCharacter === "comp-rock") {
-        compButtonBlue.innerText
+function getPlayerCharacter(playerCharacter) {
+    if (playerCharacter = rockButton) {
+        playerFistImage()
     } else if
-        (getComputerCharacter === "comp-paper") {
-            compButtonBlue.innerText
-        } else if 
-        (getComputerCharacter === "comp-scissors") {
-            compButtonBlue.innerText
-        }
-    
+        (playerCharacter = paperButton) {
+            playerPaperImage
+    } else {
+        playerScissorsImage
+    }
+    return getPlayerCharacter
 }
+
+
 
 
 function incrementPlayerScore() {
@@ -107,12 +155,4 @@ function incrementComputerScore() {
 }
 
 
-/*function endGame(playerCharacter, computerCharacter) {
-    if (incrementPlayerScore === 10) {
-        playerCharacter = "Winner"
-    } else if {
-        (incrementComputerScore === 10) {
-            computerCharacter = "Winner"
-        }
-    }
-}*/
+
