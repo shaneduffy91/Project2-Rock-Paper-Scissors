@@ -7,14 +7,14 @@
 3. The outcome of the turn is displayed on the screen.
 
 4. Next turn begins (1)
-5. The game ends when either of the players reaches 5 points.
+5. The game ends when either of the players reaches 10 points.
    - Simpler version -- the game never ends.
 */
 
 
-const rockButton = document.getElementById('rock');
-const paperButton = document.getElementById('paper');
-const scissorsButton = document.getElementById('scissors');
+const rockButton = document.getElementById('Rock');
+const paperButton = document.getElementById('Paper');
+const scissorsButton = document.getElementById('Scissors');
 const turnOutcomeDiv = document.getElementById('turn-outcome');
 let playerChoice = document.getElementById('player-choice');
 let computerChoice = document.getElementById('computer-choice');
@@ -24,7 +24,7 @@ paperButton.addEventListener('click', playTurn)
 scissorsButton.addEventListener('click', playTurn)
 
 
-function fistImage() {
+/*function fistImage() {
     let img = document.createElement('img');
     img.src = 'assets/images/fist-192x192.png';
     computerChoice.appendChild(img);
@@ -59,7 +59,7 @@ function playerScissorsImage() {
     let img = document.createElement('img');
     img.src = 'assets/images/scissors-192x192.png';
     playerChoice.appendChild(img);
-}
+}*/
 
 
 
@@ -79,17 +79,17 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
         // draw
         turnOutcomeDiv.innerText = 'Draw'
     }
-    else if (playerCharacter === 'rock' && computerCharacter === 'scissors') {
+    else if (playerCharacter === 'Rock' && computerCharacter === 'Scissors') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
     }
-    else if (playerCharacter === 'paper' && computerCharacter === 'rock') {
+    else if (playerCharacter === 'Paper' && computerCharacter === 'Rock') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
     }
-    else if (playerCharacter === 'scissors' && computerCharacter === 'paper') {
+    else if (playerCharacter === 'Scissors' && computerCharacter === 'Paper') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
@@ -99,33 +99,36 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
         turnOutcomeDiv.innerText = 'Computer wins'
         incrementComputerScore()
     }
+    console.log('Player Choice:', playerCharacter);
+    playerChoice.innerText = `Player Choice: ${playerCharacter}`;
 }
 
 
 function getComputerCharacter() {
 
-    let characterOptions = ['rock', 'paper', 'scissors']
+    let characterOptions = ['Rock', 'Paper', 'Scissors']
 
     let randomCharacterIndex = Math.floor(Math.random() * characterOptions.length)
 
     let randomCharacter = characterOptions[randomCharacterIndex]
-    if (randomCharacter === "rock") {
+    /*if (randomCharacter === "rock") {
         fistImage()
     } else if 
        (randomCharacter === "paper") {
         paperImage()
     } else {
        scissorsImage()
-    }
+    }*/
 
 
-    console.log(randomCharacter)
+    console.log('Computer Choice:', randomCharacter)
+    computerChoice.innerText = `Computer Choice: ${randomCharacter}`;
     
-    return randomCharacter
+    return randomCharacter;
 }
 
 
-function getPlayerCharacter(playerCharacter) {
+/*function getPlayerCharacter(playerCharacter) {
     if (playerCharacter = rockButton) {
         playerFistImage()
     } else if
@@ -135,7 +138,7 @@ function getPlayerCharacter(playerCharacter) {
         playerScissorsImage
     }
     return getPlayerCharacter
-}
+}*/
 
 
 

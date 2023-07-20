@@ -1,5 +1,5 @@
 body {
-    /*background-color: rgb(41, 39, 39);*/
+    background-color: rgb(41, 39, 39);
     font-family: "Raleway", sans-serif;
     color: #e1e7ec;
     text-align: center;
@@ -8,7 +8,7 @@ body {
 }
 
 .game-area {
-    background-color: #26b3e2;
+    /*background-color: #26b3e2;*/
     color: #e1e7ec;
     box-sizing: border-box;
     width: 85%;
@@ -19,6 +19,11 @@ body {
     margin-right: auto;
     padding: 1%;
     padding-right: 2%;
+}
+
+.headlogo {
+    width: 10%;
+    height: 20%;
 }
 
 .logo {
@@ -50,6 +55,7 @@ body {
     align-content: bottom;
     margin-top: 25px;
     padding-top: 9%;
+    font-size: 30px;
 }
 
 #player-button {
@@ -70,22 +76,33 @@ body {
     color: white;
 }
 
+#choices {
+    padding-top: 5rem;
+}
+
 #player-choice {
-    background-color: green;
+    /*background-color: green;*/
     display: inline;
+    font-size: 40px;
     width: 240px;
     height: 240px;
-    margin-top: 10px;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    padding-right: 1rem;
+    justify-content: space-between;
     
 }
 
 #computer-choice {
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
     display: inline;
-    font-size: 10rem;
+    font-size: 40px;
     width: 240px;
     height: 240px;
-    margin-top: 10px;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    padding-left: 1rem;
+    justify-content: space-between;
 
 }
 
