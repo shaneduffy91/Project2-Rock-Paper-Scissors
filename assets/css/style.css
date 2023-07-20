@@ -83,7 +83,7 @@ body {
 #player-choice {
     /*background-color: green;*/
     display: inline;
-    font-size: 40px;
+    font-size: 30px;
     width: 240px;
     height: 240px;
     margin-top: 4rem;
@@ -96,7 +96,7 @@ body {
 #computer-choice {
     /*background-color: blueviolet;*/
     display: inline;
-    font-size: 40px;
+    font-size: 30px;
     width: 240px;
     height: 240px;
     margin-top: 4rem;

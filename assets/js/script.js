@@ -8,7 +8,6 @@
 
 4. Next turn begins (1)
 5. The game ends when either of the players reaches 10 points.
-   - Simpler version -- the game never ends.
 */
 
 
@@ -18,16 +17,19 @@ const scissorsButton = document.getElementById('Scissors');
 const turnOutcomeDiv = document.getElementById('turn-outcome');
 let playerChoice = document.getElementById('player-choice');
 let computerChoice = document.getElementById('computer-choice');
+//let newGame = document.getElementById('play-again');
 
 rockButton.addEventListener('click', playTurn)
 paperButton.addEventListener('click', playTurn)
 scissorsButton.addEventListener('click', playTurn)
 
 
+
 /*function fistImage() {
     let img = document.createElement('img');
     img.src = 'assets/images/fist-192x192.png';
     computerChoice.appendChild(img);
+    newGame.addEventListener('click', endGame)
 }
 
 function paperImage() {
@@ -140,14 +142,32 @@ function getComputerCharacter() {
     return getPlayerCharacter
 }*/
 
+function playAgain () {
+    let restartButton = document.createElement('button');
+    restartButton.addEventListener('click', playAgain);
 
+}
+
+
+function endGame () {
+    if (incrementPlayerScore === 10) {
+        turnOutcomeDiv.innerText = `Congratulations You Win! Would you like to play again?`
+        playAgain()
+    } else if 
+        (incrementComputerScore === 10) {
+        turnOutcomeDiv.innerText = `Hard Luck You Lose! Would you like to play again?`
+        playAgain()
+    }
+}
 
 
 function incrementPlayerScore() {
     
 let playerScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++playerScore;
-
+    if (playerScore === 10){
+    endGame()
+}
 }
 
 
@@ -155,7 +175,9 @@ function incrementComputerScore() {
 
     let compScore = parseInt(document.getElementById("computer-score").innerText);
     document.getElementById("computer-score").innerText = ++compScore;
+    if (compScore === 10){
+        endGame()
+    }
 }
-
 
 
