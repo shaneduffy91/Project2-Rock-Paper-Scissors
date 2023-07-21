@@ -76,23 +76,18 @@ function playTurn(event){
    figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter)
 }
 
-function endGame () {
-    if(numberOfRounds < 10) {
-     figureOutAndDisplayTurnWinner()
-    } else if (numberOfRounds === 10) {
-        gameOn = false;
-        console.log("Breaking!");
-            if (incrementPlayerScore > incrementComputerScore) {
+
+function endGame (playerScore, compScore) {
+            if (playerScore > compScore) {
                 turnOutcomeDiv.innerText = "Congratulations, You Win!"
             } else if 
-                (incrementComputerScore > incrementPlayerScore) {
+                (compScore > playerScore) {
                 turnOutcomeDiv.innerText = "Hard Luck, You Lose"
             } else {
                 turnOutcomeDiv.innerText = "It's A Draw"
             }
         
     }
- }
 
 
 function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
@@ -107,7 +102,7 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
         numberOfRounds++
-    }
+    } 
     else if (playerCharacter === 'Paper' && computerCharacter === 'Rock') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
@@ -128,6 +123,14 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
     }
     console.log('Player Choice:', playerCharacter);
     playerChoice.innerText = `Player Choice: ${playerCharacter}`;
+    console.log(numberOfRounds);
+
+    if (numberOfRounds === 10) {
+        alert ("Game Over");
+        endGame();
+    }
+
+   
 }
 
 
@@ -180,16 +183,5 @@ function incrementComputerScore() {
     let compScore = parseInt(document.getElementById("computer-score").innerText);
     document.getElementById("computer-score").innerText = ++compScore;
 }
-
-
-
-
-
-/*function playAgain () {
-    
-
-}*/
-
-//newGame.addEventListener('click', endGame)
 
 
