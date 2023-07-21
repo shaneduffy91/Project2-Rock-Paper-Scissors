@@ -17,6 +17,8 @@ const scissorsButton = document.getElementById('Scissors');
 const turnOutcomeDiv = document.getElementById('turn-outcome');
 let playerChoice = document.getElementById('player-choice');
 let computerChoice = document.getElementById('computer-choice');
+let numberOfRounds = 0;
+gameOn = true;
 //let newGame = document.getElementById('play-again');
 
 rockButton.addEventListener('click', playTurn)
@@ -29,7 +31,7 @@ scissorsButton.addEventListener('click', playTurn)
     let img = document.createElement('img');
     img.src = 'assets/images/fist-192x192.png';
     computerChoice.appendChild(img);
-    newGame.addEventListener('click', endGame)
+    
 }
 
 function paperImage() {
@@ -42,10 +44,10 @@ function scissorsImage() {
     let img = document.createElement('img');
     img.src = 'assets/images/scissors-192x192.png';
     computerChoice.appendChild(img);
-}
+}*/
 
 
-function playerFistImage() {
+/*function playerFistImage() {
     let img = document.createElement('img');
     img.src = 'assets/images/fist-192x192.png';
     playerChoice.appendChild(img);
@@ -74,32 +76,55 @@ function playTurn(event){
    figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter)
 }
 
+function endGame () {
+    if(numberOfRounds < 10) {
+     figureOutAndDisplayTurnWinner()
+    } else if (numberOfRounds === 10) {
+        gameOn = false;
+        console.log("Breaking!");
+            if (incrementPlayerScore > incrementComputerScore) {
+                turnOutcomeDiv.innerText = "Congratulations, You Win!"
+            } else if 
+                (incrementComputerScore > incrementPlayerScore) {
+                turnOutcomeDiv.innerText = "Hard Luck, You Lose"
+            } else {
+                turnOutcomeDiv.innerText = "It's A Draw"
+            }
+        
+    }
+ }
+
 
 function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
 
     if (playerCharacter === computerCharacter) {
         // draw
         turnOutcomeDiv.innerText = 'Draw'
+        numberOfRounds++
     }
     else if (playerCharacter === 'Rock' && computerCharacter === 'Scissors') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
+        numberOfRounds++
     }
     else if (playerCharacter === 'Paper' && computerCharacter === 'Rock') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
+        numberOfRounds++
     }
     else if (playerCharacter === 'Scissors' && computerCharacter === 'Paper') {
         // player wins
         turnOutcomeDiv.innerText = 'You win'
         incrementPlayerScore()
+        numberOfRounds++
     }
     else {
         // computer wins
         turnOutcomeDiv.innerText = 'Computer wins'
         incrementComputerScore()
+        numberOfRounds++
     }
     console.log('Player Choice:', playerCharacter);
     playerChoice.innerText = `Player Choice: ${playerCharacter}`;
@@ -142,32 +167,11 @@ function getComputerCharacter() {
     return getPlayerCharacter
 }*/
 
-function playAgain () {
-    let restartButton = document.createElement('button');
-    restartButton.addEventListener('click', playAgain);
-
-}
-
-
-function endGame () {
-    if (incrementPlayerScore === 10) {
-        turnOutcomeDiv.innerText = `Congratulations You Win! Would you like to play again?`
-        playAgain()
-    } else if 
-        (incrementComputerScore === 10) {
-        turnOutcomeDiv.innerText = `Hard Luck You Lose! Would you like to play again?`
-        playAgain()
-    }
-}
-
 
 function incrementPlayerScore() {
     
 let playerScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++playerScore;
-    if (playerScore === 10){
-    endGame()
-}
 }
 
 
@@ -175,9 +179,17 @@ function incrementComputerScore() {
 
     let compScore = parseInt(document.getElementById("computer-score").innerText);
     document.getElementById("computer-score").innerText = ++compScore;
-    if (compScore === 10){
-        endGame()
-    }
 }
+
+
+
+
+
+/*function playAgain () {
+    
+
+}*/
+
+//newGame.addEventListener('click', endGame)
 
 

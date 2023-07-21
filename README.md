@@ -1,1 +1,1 @@
-# Project1-repo
+# Project2 - Rock, Paper, Scissors
