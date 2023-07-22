@@ -18,53 +18,11 @@ const turnOutcomeDiv = document.getElementById('turn-outcome');
 let playerChoice = document.getElementById('player-choice');
 let computerChoice = document.getElementById('computer-choice');
 let numberOfRounds = 0;
-gameOn = true;
-//let newGame = document.getElementById('play-again');
+let playerScore = 0;
 
 rockButton.addEventListener('click', playTurn)
 paperButton.addEventListener('click', playTurn)
 scissorsButton.addEventListener('click', playTurn)
-
-
-
-/*function fistImage() {
-    let img = document.createElement('img');
-    img.src = 'assets/images/fist-192x192.png';
-    computerChoice.appendChild(img);
-    
-}
-
-function paperImage() {
-    let img = document.createElement('img');
-    img.src = 'assets/images/newspaper-192x192.png';
-    computerChoice.appendChild(img);
-}
-
-function scissorsImage() {
-    let img = document.createElement('img');
-    img.src = 'assets/images/scissors-192x192.png';
-    computerChoice.appendChild(img);
-}*/
-
-
-/*function playerFistImage() {
-    let img = document.createElement('img');
-    img.src = 'assets/images/fist-192x192.png';
-    playerChoice.appendChild(img);
-}
-
-function playerPaperImage() {
-    let img = document.createElement('img');
-    img.src = 'assets/images/newspaper-192x192.png';
-    playerChoice.appendChild(img);
-}
-
-function playerScissorsImage() {
-    let img = document.createElement('img');
-    img.src = 'assets/images/scissors-192x192.png';
-    playerChoice.appendChild(img);
-}*/
-
 
 
 function playTurn(event){
@@ -77,13 +35,17 @@ function playTurn(event){
 }
 
 
-function endGame (playerScore, compScore) {
-            if (playerScore > compScore) {
+function checkWinner () {
+        let playerTotalScore = document.getElementById("player-score");
+        let compTotalScore = document.getElementById("computer-score");
+            
+            if (playerTotalScore > compTotalScore) {
                 turnOutcomeDiv.innerText = "Congratulations, You Win!"
             } else if 
-                (compScore > playerScore) {
+                (compTotalScore > playerTotalScore) {
                 turnOutcomeDiv.innerText = "Hard Luck, You Lose"
-            } else {
+            } else if 
+                (playerTotalScore === compTotalScore) {
                 turnOutcomeDiv.innerText = "It's A Draw"
             }
         
@@ -127,7 +89,7 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
 
     if (numberOfRounds === 10) {
         alert ("Game Over");
-        endGame();
+        checkWinner();
     }
 
    
@@ -141,14 +103,6 @@ function getComputerCharacter() {
     let randomCharacterIndex = Math.floor(Math.random() * characterOptions.length)
 
     let randomCharacter = characterOptions[randomCharacterIndex]
-    /*if (randomCharacter === "rock") {
-        fistImage()
-    } else if 
-       (randomCharacter === "paper") {
-        paperImage()
-    } else {
-       scissorsImage()
-    }*/
 
 
     console.log('Computer Choice:', randomCharacter)
@@ -158,22 +112,8 @@ function getComputerCharacter() {
 }
 
 
-/*function getPlayerCharacter(playerCharacter) {
-    if (playerCharacter = rockButton) {
-        playerFistImage()
-    } else if
-        (playerCharacter = paperButton) {
-            playerPaperImage
-    } else {
-        playerScissorsImage
-    }
-    return getPlayerCharacter
-}*/
-
-
 function incrementPlayerScore() {
-    
-let playerScore = parseInt(document.getElementById("player-score").innerText);
+    let playerScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++playerScore;
 }
 
@@ -183,5 +123,12 @@ function incrementComputerScore() {
     let compScore = parseInt(document.getElementById("computer-score").innerText);
     document.getElementById("computer-score").innerText = ++compScore;
 }
+
+/*function totalScore () {
+    if (numberOfRounds === 10) {
+        return playerScore;
+    
+    }
+}*/
 
 
