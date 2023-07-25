@@ -2,7 +2,18 @@
 
 For my second project with Code Institute, I have created a Rock, Paper, Scissors game.
 
-<a href="https://shaneduffy91.github.io/The-Anxiety-Hub/" target="_blank" aria-label="The live project">View the live project here</a>
+The following is the Rules of the Game.
+1. When the player comes to the page, they see 3 buttons: rock, paper, scissors
+2. When the player clicks on one of the buttons, the game begins, the computer
+    randomly chooses rock, paper or scissors, and the player's and computer's 
+    choices are compared to see who wins.
+
+3. The outcome of the turn is displayed on the screen.
+
+4. Next turn begins 
+5. The game ends when either of the players reaches 10 points.
+
+<a href="https://shaneduffy91.github.io/Project1-repo/" target="_blank" aria-label="The live project">View the live project here</a>
 
 ## Features
 ### Existing Features
@@ -10,16 +21,18 @@ For my second project with Code Institute, I have created a Rock, Paper, Scissor
 <ul> 
 <li>Header</li>
         <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Here we have a fist logo as part of the header, depicting rock in the rock, paper scissors game.</li>
+        <li>After the heading, we have the title of the game - Rock, Paper Scissors.</li>
         </ul>
         <br>
 
 <li>The Landing Page / Home Page</li>
+This is a one page website that consists of the following features:
         <ul>
-        <li></li>
+        <li>Firstly, we have three clickable icons, a fist, a newspaper and a pair of scissors.</li>
+        <li>The user clicks on one of these icons to begin the game.<li>
+        <li>One the game begins, in the middle of the screen below the icons, we have a display that shows the player's choice and the computer's choice. This display also shows the outcome of the turn. 
+        <li>At the bottom of the screen is the scoring area. This displays the player score and the computer score.<li>
         </ul>
         <br>
  
@@ -83,20 +96,20 @@ The website was deployed to GitHub pages using the following steps:
 <li>On the settings page, go to the menu on the left and click on pages.</li>
 <li>Under "Source", select branch "Main" and select "Root" folder.</li>
 <li>Click Save. The page will automatically refresh and the link to the published site will appear.</li>
-<li>This site is published at  <a href="https://shaneduffy91.github.io/The-Anxiety-Hub/" target="_blank" aria-label="The live project">https://shaneduffy91.github.io/The-Anxiety-Hub/</a></li>
+<li>This site is published at  <a href="https://shaneduffy91.github.io/Project1-repo/" target="_blank" aria-label="The live project"></a></li>
 </ul> 
 
 ## Credits
 <ul>
 <li>Code Institue: GitHub Template</li>
-<li>YouTube: Code Nepal youtube video for help to style the responsive footer.</li>
-<li>Am I Responsive: Screenshot of the responsive webpage.</li>
-<li>HSE: Information on the webpage about OCD and CBT</li>
-<li>NHS: Information on the webpage about Generalised Anxiety Disorders.</li>
-<li>Cleveland Clinic: Information on the webpage about anxiety.</li>
-<li>Maynooth University: Mental health statistic on index.html page.</li>
-<li>Dr. David Burns: Founder of Feeling Good. Information on anxiety and CBT Treatment. Recommendation of reading material. Also sampled Burns' Anxiety Checklist for the questions on form.html. </li>
-<li>Jon Hershfield MFT: Information on OCD and recommendation of reading material.</li>
-<li>Sheppard-Pratt: Information on OCD and Jon Hershfield MFT. Recommendation of reading material.</li>
+<li>YouTube: </li>
+<li>Code Institute: Love Maths Walkthrough Project</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
 </ul>
 

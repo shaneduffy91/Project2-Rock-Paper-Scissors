@@ -6,7 +6,7 @@
 
 3. The outcome of the turn is displayed on the screen.
 
-4. Next turn begins (1)
+4. Next turn begins 
 5. The game ends when either of the players reaches 10 points.
 */
 
