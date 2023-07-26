@@ -13,7 +13,7 @@ The following is the Rules of the Game.
 4. Next turn begins 
 5. The game ends when either of the players reaches 10 points.
 
-<a href="https://shaneduffy91.github.io/Project1-repo/" target="_blank" aria-label="The live project">View the live project here</a>
+<a href=" https://shaneduffy91.github.io/Project2-Rock-Paper-Scissors/" target="_blank" aria-label="The live project">View the live project here</a>
 
 ## Features
 ### Existing Features
@@ -88,7 +88,7 @@ The website was deployed to GitHub pages using the following steps:
 <li>On the settings page, go to the menu on the left and click on pages.</li>
 <li>Under "Source", select branch "Main" and select "Root" folder.</li>
 <li>Click Save. The page will automatically refresh and the link to the published site will appear.</li>
-<li>This site is published at  <a href="https://shaneduffy91.github.io/Project1-repo/" target="_blank" aria-label="The live project"></a>https://shaneduffy91.github.io/Project1-repo/</li>
+<li>This site is published at  <a href=" https://shaneduffy91.github.io/Project2-Rock-Paper-Scissors/" target="_blank" aria-label="The live project"></a> https://shaneduffy91.github.io/Project2-Rock-Paper-Scissors/</li>
 </ul> 
 
 ## Credits
