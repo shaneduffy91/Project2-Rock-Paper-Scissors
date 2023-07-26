@@ -58,7 +58,7 @@ I have tested the website using the Google Chrome and Microsoft Edge Browsers on
 I have used the Chrome Developer tool to check the website for responsiveness. I can conclude that the website works on different screen 
 sizes ranging from Desktop to iphone SE screen sizes.
 
-<img src="\workspace\The-Anxiety-Hub\assets\images\Screenshot 2023-05-07 203934.png"  style="width:600px; height:450px" alt="Responsive Website">
+<img src=""  style="width:600px; height:450px" alt="Responsive Website">
 
 <br>
 <br>
@@ -78,7 +78,7 @@ apart from the minor bugs on the form.html page.
         <li>
         Lighthouse
         <ul>
-        <li><img src="\workspace\The-Anxiety-Hub\assets\images\Screenshot 2023-05-07 203741.png"  style="width:700px; height:450px" alt="Lighthouse"></li>
+        <li><img src=""  style="width:700px; height:450px" alt="Lighthouse"></li>
         </ul>
         </li>
 </ul>
