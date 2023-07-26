@@ -36,10 +36,7 @@ This is a one page website that consists of the following features:
         </ul>
         <br>
  
-        <ul>
-        
-        </ul> 
-        <br>
+<img src = "assets/images/Rock paper scissors 26-07-2023.png" alt = "image of home page">
   
 <br>
 
@@ -58,7 +55,7 @@ I have tested the website using the Google Chrome and Microsoft Edge Browsers on
 I have used the Chrome Developer tool to check the website for responsiveness. I can conclude that the website works on different screen 
 sizes ranging from Desktop to iphone SE screen sizes.
 
-<img src=""  style="width:600px; height:450px" alt="Responsive Website">
+<img src="assets/images/amiresponsive.png"  style="width:600px; height:450px" alt="Responsive Website">
 
 <br>
 <br>
@@ -73,20 +70,24 @@ apart from the minor bugs on the form.html page.
         </li>
         <li>
         CSS
-        <ul><li>When passing the CSS code through the W3C validator, no errors were returned.</li></ul>
+        <ul><li>When passing the CSS code through the W3C validator, no errors were returned.</li>
+        </ul>
+        </li>
+        <li>
+        <li>JavaScript
+        <ul><li>There are 8 functions in this file.</li>
+            <li>When passing the JS code through the JS Hint validator, no errors were returned. 
+            </li>
+        </ul>
         </li>
         <li>
         Lighthouse
         <ul>
-        <li><img src=""  style="width:700px; height:450px" alt="Lighthouse"></li>
+        <li><img src="assets/images/Screenshot 2023-07-26 212101.png"  style="width:700px; height:450px" alt="Lighthouse"></li>
         </ul>
         </li>
 </ul>
 
-
-### Unfixed Bugs
-There are a few unfixed errors on the form.html page because the questions have thesame multiple choice answers. 
-Also, the form submission does not work due to an error with formdump.codeinstitute server.
 
 ## Deployment
 The website was deployed to GitHub pages using the following steps:
@@ -96,20 +97,13 @@ The website was deployed to GitHub pages using the following steps:
 <li>On the settings page, go to the menu on the left and click on pages.</li>
 <li>Under "Source", select branch "Main" and select "Root" folder.</li>
 <li>Click Save. The page will automatically refresh and the link to the published site will appear.</li>
-<li>This site is published at  <a href="https://shaneduffy91.github.io/Project1-repo/" target="_blank" aria-label="The live project"></a></li>
+<li>This site is published at  <a href="https://shaneduffy91.github.io/Project1-repo/" target="_blank" aria-label="The live project"></a>https://shaneduffy91.github.io/Project1-repo/</li>
 </ul> 
 
 ## Credits
 <ul>
 <li>Code Institue: GitHub Template</li>
-<li>YouTube: </li>
 <li>Code Institute: Love Maths Walkthrough Project</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Brian Macharia: Code Institute Mentor</li>
 </ul>
 

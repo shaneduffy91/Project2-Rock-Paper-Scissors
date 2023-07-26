@@ -22,34 +22,34 @@ let playerScore = 0;
 let compScore = 0;
 
 
-rockButton.addEventListener('click', playTurn)
-paperButton.addEventListener('click', playTurn)
-scissorsButton.addEventListener('click', playTurn)
+rockButton.addEventListener('click', playTurn);
+paperButton.addEventListener('click', playTurn);
+scissorsButton.addEventListener('click', playTurn);
 
 
 function playTurn(event){
-   let clickedButton = event.currentTarget
-   let playerCharacter = clickedButton.id
-   let computerCharacter = getComputerCharacter()
+   let clickedButton = event.currentTarget;
+   let playerCharacter = clickedButton.id;
+   let computerCharacter = getComputerCharacter();
 
    // compare player/computer character and print the outcome
-   figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter)
+   figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter);
 }
 
 
 function checkWinner () {
             
         if (playerScore === compScore) {
-            turnOutcomeDiv.innerText = "Game Over, It's A Draw"
-            resetButton()
+            turnOutcomeDiv.innerText = "Game Over, It's A Draw";
+            resetButton();
         } else if 
             (playerScore > compScore) {
-             turnOutcomeDiv.innerText = "Game Over, Congratulations, You Win!"
-             resetButton()
+             turnOutcomeDiv.innerText = "Game Over, Congratulations, You Win!";
+             resetButton();
         }else if 
             (compScore > playerScore) {
-             turnOutcomeDiv.innerText = "Game Over, Hard Luck You Lose!"
-             resetButton()
+             turnOutcomeDiv.innerText = "Game Over, Hard Luck You Lose!";
+             resetButton();
         } 
         
                 
@@ -58,18 +58,17 @@ function checkWinner () {
 function resetButton () {
         let btn = document.createElement("button");
         btn.name = "New Game";
-        btn.innerText = "New Game"
-        btn.style.width = "100px"
-        btn.style.height = "50px"
-        btn.style.color = "black"
-        //btn.style.paddingLeft = "1rem"
+        btn.innerText = "New Game";
+        btn.style.width = "100px";
+        btn.style.height = "50px";
+        btn.style.color = "black";
         turnOutcomeDiv.appendChild(btn);
-        btn.addEventListener('click', newGame)
+        btn.addEventListener('click', newGame);
 
 }
 
 function newGame () {
-        location.reload()
+        location.reload();
         
     }
 
@@ -78,36 +77,36 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
 
     if (playerCharacter === computerCharacter) {
         // draw
-        turnOutcomeDiv.innerText = 'Draw'
-        numberOfRounds++
+        turnOutcomeDiv.innerText = 'Draw';
+        numberOfRounds++;
     }
     else if (playerCharacter === 'Rock' && computerCharacter === 'Scissors') {
         // player wins
-        turnOutcomeDiv.innerText = 'You win'
-        incrementPlayerScore()
-        playerScore++
-        numberOfRounds++
+        turnOutcomeDiv.innerText = 'You win';
+        incrementPlayerScore();
+        playerScore++;
+        numberOfRounds++;
     } 
     else if (playerCharacter === 'Paper' && computerCharacter === 'Rock') {
         // player wins
-        turnOutcomeDiv.innerText = 'You win'
-        incrementPlayerScore()
-        playerScore++
-        numberOfRounds++
+        turnOutcomeDiv.innerText = 'You win';
+        incrementPlayerScore();
+        playerScore++;
+        numberOfRounds++;
     }
     else if (playerCharacter === 'Scissors' && computerCharacter === 'Paper') {
         // player wins
-        turnOutcomeDiv.innerText = 'You win'
-        incrementPlayerScore()
-        playerScore++
-        numberOfRounds++
+        turnOutcomeDiv.innerText = 'You win';
+        incrementPlayerScore();
+        playerScore++;
+        numberOfRounds++;
     }
     else {
         // computer wins
-        turnOutcomeDiv.innerText = 'Computer wins'
-        incrementComputerScore()
-        compScore++
-        numberOfRounds++
+        turnOutcomeDiv.innerText = 'Computer wins';
+        incrementComputerScore();
+        compScore++;
+        numberOfRounds++;
     }
     console.log('Player Choice:', playerCharacter);
     playerChoice.innerText = `Player Choice: ${playerCharacter}`;
@@ -123,14 +122,14 @@ function figureOutAndDisplayTurnWinner(playerCharacter, computerCharacter) {
 
 function getComputerCharacter() {
 
-    let characterOptions = ['Rock', 'Paper', 'Scissors']
+    let characterOptions = ['Rock', 'Paper', 'Scissors'];
 
-    let randomCharacterIndex = Math.floor(Math.random() * characterOptions.length)
+    let randomCharacterIndex = Math.floor(Math.random() * characterOptions.length);
 
-    let randomCharacter = characterOptions[randomCharacterIndex]
+    let randomCharacter = characterOptions[randomCharacterIndex];
 
 
-    console.log('Computer Choice:', randomCharacter)
+    console.log('Computer Choice:', randomCharacter);
     computerChoice.innerText = `Computer Choice: ${randomCharacter}`;
     
     return randomCharacter;

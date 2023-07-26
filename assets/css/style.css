@@ -3,12 +3,10 @@ body {
     font-family: "Raleway", sans-serif;
     color: #e1e7ec;
     text-align: center;
-    /*background: url(https://images.pexels.com/photos/247676/pexels-photo-247676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)center center / cover no-repeat fixed;*/
     opacity: 100%;
 }
 
 .game-area {
-    /*background-color: #26b3e2;*/
     color: #e1e7ec;
     box-sizing: border-box;
     width: 85%;
@@ -52,7 +50,6 @@ body {
 
 #turn-outcome {
     color: #e1e7ec;
-    align-content: bottom;
     margin-top: 25px;
     padding-top: 9%;
     font-size: 30px;
@@ -71,7 +68,6 @@ body {
 
 .btn--blue:active,
 .btn--blue:hover {
-    /*background-color: darkblue;*/
     transform: scale(1.5); 
     color: white;
 }
@@ -81,7 +77,6 @@ body {
 }
 
 #player-choice {
-    /*background-color: green;*/
     display: inline;
     font-size: 30px;
     width: 240px;
@@ -94,7 +89,6 @@ body {
 }
 
 #computer-choice {
-    /*background-color: blueviolet;*/
     display: inline;
     font-size: 30px;
     width: 240px;
@@ -105,12 +99,6 @@ body {
     justify-content: space-between;
 
 }
-
-/*.btn--red:active,
-.btn--red:hover {
-    background-color: darkred;
-    color: white;
-}*/
 
 @media (max-width: 500px) {
     .heading {
