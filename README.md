@@ -32,7 +32,7 @@ This is a one page website that consists of the following features:
         <li>Firstly, we have three clickable icons, a fist, a newspaper and a pair of scissors.</li>
         <li>The user clicks on one of these icons to begin the game.<li>
         <li>One the game begins, in the middle of the screen below the icons, we have a display that shows the player's choice and the computer's choice. This display also shows the outcome of the turn. 
-        <li>At the bottom of the screen is the scoring area. This displays the player score and the computer score.<li>
+        <li>At the bottom of the screen is the scoring area. This displays the player score and the computer score.</li>
         </ul>
         <br>
  
