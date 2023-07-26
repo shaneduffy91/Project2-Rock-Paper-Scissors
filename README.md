@@ -88,7 +88,7 @@ The website was deployed to GitHub pages using the following steps:
 <li>On the settings page, go to the menu on the left and click on pages.</li>
 <li>Under "Source", select branch "Main" and select "Root" folder.</li>
 <li>Click Save. The page will automatically refresh and the link to the published site will appear.</li>
-<li>This site is published at  <a href=" https://shaneduffy91.github.io/Rock-Paper-Scissors/" target="_blank" aria-label="The live project"></a> https://shaneduffy91.github.io/Project2-Rock-Paper-Scissors/</li>
+<li>This site is published at  <a href=" https://shaneduffy91.github.io/Rock-Paper-Scissors/" target="_blank" aria-label="The live project"></a> https://shaneduffy91.github.io/Rock-Paper-Scissors/</li>
 </ul> 
 
 ## Credits
