@@ -13,7 +13,7 @@ The following is the Rules of the Game.
 4. Next turn begins 
 5. The game ends when either of the players reaches 10 points.
 
-<a href=" https://shaneduffy91.github.io/Project2-Rock-Paper-Scissors/" target="_blank" aria-label="The live project">View the live project here</a>
+<a href="https://shaneduffy91.github.io/Project2-Rock-Paper-Scissors/" target="_blank" aria-label="The live project">View the live project here</a>
 
 ## Features
 ### Existing Features
